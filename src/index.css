@@ -21,6 +21,8 @@ body {
     min-height: 100vh;
     background-color: #edf3f8;
     transition: 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 img, picture, video, canvas, svg {
@@ -56,6 +58,80 @@ img, picture, video, canvas, svg {
         --Light-San-Juan-Blue: #6c8294;
 }
 
+
+
+
+
+/************************ 
+    BACKGROUND CIRCLES
+*************************/
+/* Homepage */
+#bg-circle-homepage {
+    position: absolute;
+    height: 78rem;
+    width: 78rem;
+    top: -16rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+#bg-circle-homepage img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #bg-circle-homepage {
+        height: 94.9rem;
+        width: 94.9rem;
+        top: -18.7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #bg-circle-homepage {
+        height: 78rem;
+        width: 78rem;
+        left: auto;
+        top: 21.7rem;
+        right: -53rem;
+    }
+}
+
+/* Pricing & About & Contact */
+#bg-circle-pricing-contact-about {
+    position: absolute;
+    height: 78rem;
+    width: 78rem;
+    top: -64.5rem;
+    right: -47.8rem;
+    z-index: -10;
+}
+
+#bg-circle-pricing-contact-about img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #bg-circle-pricing-contact-about {
+        top: -46.4rem;
+        right: -51.6rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #bg-circle-pricing-contact-about {
+        top: -52.6rem;
+        right: -14rem;
+    }
+}
+
+
+
+
+
 /****************** 
     Buttons
 ******************/
@@ -78,6 +154,7 @@ img, picture, video, canvas, svg {
 .button-primary:hover {
     background-color: var(--Charm-Pink);
 }
+
 
 
 
@@ -149,5 +226,11 @@ img, picture, video, canvas, svg {
 
     .main-navigation .hamburger-close-icon {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main-navigation {
+        padding: 4rem 0;
     }
 }
