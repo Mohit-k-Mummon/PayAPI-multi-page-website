@@ -10,10 +10,7 @@ const BgCircle = () => {
 const HomePage = () => {
 	return (
 		<>
-			{ReactDOM.createPortal(
-				<BgCircle />,
-				document.getElementById('bg-circle-pricing-contact-about')
-			)}
+			{ReactDOM.createPortal(<BgCircle />, document.getElementById('bg-circle-homepage'))}
 			<h1>HomePage</h1>
 		</>
 	);

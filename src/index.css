@@ -234,3 +234,82 @@ img, picture, video, canvas, svg {
         padding: 4rem 0;
     }
 }
+
+
+
+
+/********************* 
+    Mobile Menu
+*********************/
+.mobile-menu {
+    height: 100vh;
+    background-color: var(--Mirage-Blue);
+    position: absolute;
+    width: 30rem;
+    top: 0;
+    right: -100vw;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    padding: 4.8rem 2.7rem 0 2.4rem;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Mobile Menu bg image */
+.mobile-menu__circle-img {
+    position: absolute;
+    height: 78rem;
+    width: 78rem;
+    top: -55rem;
+    left: -28rem;
+    pointer-events: none;
+}
+
+/* Close Icon */
+.mobile-menu__close-icon-container {
+    display: flex;
+    justify-content: end;
+    border-bottom: 1px solid rgba(251, 252, 254, 0.15);
+    padding-bottom: 2.4rem;
+}
+
+.mobile-menu__close-icon-container img {
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+/* Links */
+.mobile-menu__links-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+    margin-top: 4.3rem;
+}
+
+.mobile-menu__links-container li a {
+    color: var(--Link-Water-White);
+    text-decoration: none;
+    font-family: var(--Public-Sans);
+    opacity: 0.7;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* Button */
+.mobile-menu .button-container {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu .button-container .button {
+    width: 100%;
+    text-align: center;
+}
