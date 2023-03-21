@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+/****************** 
+      RESET
+******************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--main-background-color);
+    transition: 0.3s;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+
+/****************** 
+    VARIABLES
+******************/
+:root {
+    /* Typography */
+    --Serif-Display: 'DM Serif Display', serif;
+    --Public-Sans: 'Public Sans', sans-serif;
+
+    /* Colors */
+        /* Primary */
+        --Dark-Pink: #ba4270;
+        --Link-Water-White: #fbfcfe;
+
+        /* Secondary */
+        --San-Juan-Blue: #36536b;
+        --Mirage-Blue: #1b262f;
+        --Charm-Pink: #da6d97;
+        --Light-San-Juan-Blue: #6c8294;
+
+}
