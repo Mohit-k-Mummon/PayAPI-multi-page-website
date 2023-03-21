@@ -19,13 +19,18 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: var(--main-background-color);
+    background-color: #edf3f8;
     transition: 0.3s;
 }
 
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+}
+
+.container {
+    max-width: 111rem;
+    margin: 0 auto;
 }
 
 
@@ -49,5 +54,100 @@ img, picture, video, canvas, svg {
         --Mirage-Blue: #1b262f;
         --Charm-Pink: #da6d97;
         --Light-San-Juan-Blue: #6c8294;
+}
 
+/****************** 
+    Buttons
+******************/
+.button {
+    text-decoration: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.button-primary {
+    background-color: var(--Dark-Pink);
+    color: #fff;
+    padding: 1.55rem 2.455rem;
+    border-radius: 50px;
+    font-family: var(--Public-Sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.button-primary:hover {
+    background-color: var(--Charm-Pink);
+}
+
+
+
+
+/********************* 
+    Main Navigation
+*********************/
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2.4rem;
+}
+
+.main-navigation .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6.4rem;
+}
+
+.main-navigation .logo-container .logo {
+    height: 3.8rem;
+    width: auto;
+}
+
+.main-navigation .logo-container ul {
+    display: none;
+    list-style: none;
+}
+
+.main-navigation .button.button-primary {
+    display: none;
+}
+
+.main-navigation .hamburger-close-icon {
+    height: 1.7rem;
+    width: auto;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .main-navigation {
+        padding: 4rem 4rem;
+    }
+    .main-navigation .logo-container ul {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .main-navigation .logo-container ul li a {
+        color: var(--San-Juan-Blue);
+        font-family: var(--Public-Sans);
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.8rem;
+        text-decoration: none;
+        opacity: 0.7;
+    }
+
+    .main-navigation .logo-container ul li a.active {
+        opacity: 1;
+    }
+    
+    .main-navigation .button.button-primary {
+        display: block;
+    }
+
+    .main-navigation .hamburger-close-icon {
+        display: none;
+    }
 }
