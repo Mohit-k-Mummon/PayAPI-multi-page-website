@@ -18,11 +18,11 @@ html {
 }
 
 body {
-    min-height: 100vh;
     background-color: #edf3f8;
-    transition: 0.3s;
-    position: relative;
+    min-height: 100vh;
     overflow: hidden;
+    position: relative;
+    transition: 0.3s;
 }
 
 img, picture, video, canvas, svg {
@@ -34,6 +34,18 @@ img, picture, video, canvas, svg {
     max-width: 111rem;
     margin: 0 auto;
 }
+
+/* Class for labels only visible to screen readers */
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+  
 
 
 
@@ -67,12 +79,12 @@ img, picture, video, canvas, svg {
 *************************/
 /* Homepage */
 #bg-circle-homepage {
-    position: absolute;
     height: 78rem;
-    width: 78rem;
-    top: -16rem;
     left: 50%;
+    position: absolute;
+    top: -16rem;
     transform: translate(-50%, -50%);
+    width: 78rem;
     z-index: -10;
 }
 
@@ -92,20 +104,20 @@ img, picture, video, canvas, svg {
 @media screen and (min-width: 1024px) {
     #bg-circle-homepage {
         height: 78rem;
-        width: 78rem;
         left: auto;
-        top: 21.7rem;
         right: -53rem;
+        top: 21.7rem;
+        width: 78rem;
     }
 }
 
 /* Pricing & About & Contact */
 #bg-circle-pricing-contact-about {
-    position: absolute;
     height: 78rem;
-    width: 78rem;
-    top: -64.5rem;
+    position: absolute;
     right: -47.8rem;
+    top: -64.5rem;
+    width: 78rem;
     z-index: -10;
 }
 
@@ -138,17 +150,23 @@ img, picture, video, canvas, svg {
 .button {
     text-decoration: none;
     outline: none;
+    border: none;
     transition: 0.3s;
+    cursor: pointer;
+}
+
+.button-long {
+    width: 100%;
 }
 
 .button-primary {
     background-color: var(--Dark-Pink);
-    color: #fff;
-    padding: 1.55rem 2.455rem;
     border-radius: 50px;
+    color: #fff;
     font-family: var(--Public-Sans);
     font-size: 1.5rem;
     font-weight: 700;
+    padding: 1.55rem 2.455rem;
 }
 
 .button-primary:hover {
@@ -163,18 +181,18 @@ img, picture, video, canvas, svg {
     Main Navigation
 *********************/
 .main-navigation {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 4rem 2.4rem;
 }
 
 .main-navigation .logo-container {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     gap: 6.4rem;
+    justify-content: space-between;
 }
 
 .main-navigation .logo-container .logo {
@@ -212,8 +230,8 @@ img, picture, video, canvas, svg {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.8rem;
-        text-decoration: none;
         opacity: 0.7;
+        text-decoration: none;
     }
 
     .main-navigation .logo-container ul li a.active {
@@ -242,15 +260,16 @@ img, picture, video, canvas, svg {
     Mobile Menu
 *********************/
 .mobile-menu {
-    height: 100vh;
     background-color: var(--Mirage-Blue);
-    position: absolute;
-    width: 30rem;
-    top: 0;
-    right: -100vw;
+    height: 100vh;
     overflow: hidden;
-    transition: 0.5s ease-in-out;
     padding: 4.8rem 2.7rem 0 2.4rem;
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 30rem;
+    z-index: 11;
 }
 
 .mobile-menu.active {
@@ -259,19 +278,19 @@ img, picture, video, canvas, svg {
 
 /* Mobile Menu bg image */
 .mobile-menu__circle-img {
-    position: absolute;
     height: 78rem;
-    width: 78rem;
-    top: -55rem;
     left: -28rem;
     pointer-events: none;
+    position: absolute;
+    top: -55rem;
+    width: 78rem;
 }
 
 /* Close Icon */
 .mobile-menu__close-icon-container {
-    display: flex;
-    justify-content: end;
     border-bottom: 1px solid rgba(251, 252, 254, 0.15);
+    display: flex;
+    justify-content: flex-end;
     padding-bottom: 2.4rem;
 }
 
@@ -282,34 +301,196 @@ img, picture, video, canvas, svg {
 
 /* Links */
 .mobile-menu__links-container {
-    list-style: none;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     gap: 3.2rem;
+    justify-content: space-between;
+    list-style: none;
     margin-top: 4.3rem;
 }
 
 .mobile-menu__links-container li a {
     color: var(--Link-Water-White);
-    text-decoration: none;
     font-family: var(--Public-Sans);
-    opacity: 0.7;
-    font-weight: 700;
     font-size: 2rem;
+    font-weight: 700;
+    opacity: 0.7;
+    text-decoration: none;
 }
 
 /* Button */
 .mobile-menu .button-container {
-    margin-top: 3rem;
-    width: 100%;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
 }
 
 .mobile-menu .button-container .button {
     width: 100%;
     text-align: center;
+}
+
+
+
+
+/********************* 
+    Hero Section
+*********************/
+.hero__image-container {
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+}
+.hero__image-container img {
+    bottom: 6.5rem;
+    height: 40.5rem;
+    left: 2.5rem;
+    pointer-events: none;
+    position: relative;
+    width: auto;
+}
+
+/* Content */
+.hero__content {
+    padding: 0 2.4rem;
+    max-width: 45rem;
+    margin: 0.6rem auto;
+}
+
+.hero__content h1 {
+    color: var(--San-Juan-Blue);
+    font-family: var(--Serif-Display);
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-align: center;
+}
+
+.hero__content #input-field {
+    background-color: var(--Link-Water-White);
+    border-radius: 2.4rem;
+    border: none;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    color: var(--San-Juan-Blue);
+    font-family: var(--Public-Sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    outline: none;
+    padding: 1.5rem 2.7rem;
+    width: 100%;
+}
+
+.hero__content .hero__content-form {
+    margin-top: 2.4rem;
+    width: 100%;
+}
+
+/* Inner Button */
+.hero__content #hero__form-inner-button {
+    display: none;
+}
+
+.hero__content #hero__form-outer-button {
+    margin-top: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__image-container img {
+        height: 50rem;
+        left: 3.3rem;
+        bottom: 6.15rem;
+    }
+
+    /* Content */
+    .hero__content {
+        margin-top: 10.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: none;
+    }
+
+    .hero__content h1 {
+        color: var(--San-Juan-Blue);
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        max-width: 24ch;
+        text-align: center;
+    }
+
+    .hero__content .hero__content-form {
+        align-items: center;
+        background-color: var(--Link-Water-White);
+        border-radius: 2.4rem;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        display: flex;
+        flex-direction: row;
+        margin-top: 3.2rem;
+        max-width: 44.5rem;
+    }
+
+    .hero__content #input-field {
+        width: 100%;
+        box-shadow: none;
+        padding: 1.5rem 2.7rem;
+        width: auto;
+        flex-grow: 1;
+    }
+    
+    /* Inner Button */
+    .hero__content #hero__form-inner-button {
+        display: block;
+    }
+
+    .hero__content #hero__form-outer-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 11.1rem;
+        position: relative;
+    }
+
+    /* Img */
+    .hero__image-container {
+        width: 70rem;
+    }
+
+    .hero__image-container img {
+        /* Here the phone img is relative to the 'hero' class */
+        height: 82.6rem;
+        left: auto;
+        position: absolute;
+        right: -11.94rem;
+        top: -19rem;
+    }
+
+    /* Content */
+    .hero__content {
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero__content h1 {
+        font-size: 7.2rem;
+        letter-spacing: -0.553846px;
+        line-height: 7.2rem;
+        max-width: 20ch;
+        text-align: left;
+    }
+
+    .hero__content .hero__content-form {
+        margin-top: 4.8rem;
+    }
 }
