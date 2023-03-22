@@ -20,7 +20,7 @@ html {
 body {
     background-color: #edf3f8;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     transition: 0.3s;
 }
@@ -398,6 +398,22 @@ img, picture, video, canvas, svg {
     margin-top: 1.6rem;
 }
 
+/* Contact */
+.hero__contact {
+    color: var(--Light-San-Juan-Blue);
+    font-family: var(--Public-Sans);
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-top: 2.4rem;
+    text-align: center;
+}
+
+.hero__contact a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+}
+
 @media screen and (min-width: 768px) {
     .hero__image-container img {
         height: 50rem;
@@ -449,6 +465,11 @@ img, picture, video, canvas, svg {
     .hero__content #hero__form-outer-button {
         display: none;
     }
+
+    /* Contact */
+    .hero__contact {
+        margin-top: 1.6rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -492,5 +513,10 @@ img, picture, video, canvas, svg {
 
     .hero__content .hero__content-form {
         margin-top: 4.8rem;
+    }
+
+    /* Contact */
+    .hero__contact {
+        margin-left: 2.7rem;
     }
 }

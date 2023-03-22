@@ -2,6 +2,9 @@ import React from 'react';
 
 import phoneImg from '../../assets/home/desktop/illustration-phone-mockup.svg';
 
+// Router
+import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
 	return (
 		<section className='hero container'>
@@ -27,6 +30,9 @@ const HeroSection = () => {
 				<button id='hero__form-outer-button' className='button button-primary button-long'>
 					Schedule a Demo
 				</button>
+				<p className='hero__contact'>
+					Have any questions? <Link to={'/contact'}>Contact Us</Link>
+				</p>
 			</div>
 		</section>
 	);
