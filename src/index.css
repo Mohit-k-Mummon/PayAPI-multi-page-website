@@ -829,3 +829,129 @@ img, picture, video, canvas, svg {
         margin-top: 3.2rem;
     }
 }
+
+
+
+
+
+/********************* 
+    Features Section
+*********************/
+.features {
+    padding: 2.4rem;
+}
+
+/*Features Container */
+.feature-easy {
+    height: min-content;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    max-width: 32.5rem;
+    margin: 5.8rem auto;
+}
+
+/* features Img */
+.feature-easy__img-container {
+    height: 22.7rem;
+    position: relative;
+}
+
+.easy-img {
+    position: absolute;
+    left: 55.9%;
+    transform: translate(-50%,-50%);
+    top: 12.4rem;
+    /* Here we are controlling the size of this svg with max-width */
+    max-width: 44.6rem;
+    z-index: -10;
+}
+
+/* features content */
+.feature-easy__content h1 {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    /* identical to box height, or 100% */
+    text-align: center;
+    letter-spacing: -0.276923px;
+    color: var(--San-Juan-Blue);
+}
+
+.feature-easy__content p {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+    color: #6C8294;
+    margin-top: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    /* Features Container */
+    .feature-easy {
+        width: 57.3rem;
+        max-width: initial;
+        gap: 4.7rem;
+        margin: 7.65rem auto;
+    }
+    
+    /* Features Img */
+    .feature-easy__img-container {
+        height: 25rem;
+    }
+    
+
+    .easy-img {
+        max-width: 53.2rem;
+        top: 14.7rem;
+    }
+
+    /* Features Content */
+    .feature-easy__content h1 {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.369231px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Features Content */
+    .feature-easy {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 12.6rem;
+        margin: 12.5rem auto;
+    }
+
+    /* Features Img */
+    .feature-easy__img-container {
+        width: 44.5rem;
+        height: 28.4rem;
+    }
+
+    .easy-img {
+        max-width: 62rem;
+        top: 16.7rem;
+    }
+
+    /* Features Content */
+    .feature-easy__content {
+        flex-grow: 1;
+    }
+
+    .feature-easy__content h1 {
+        text-align: left;
+        margin-top: 6rem;
+    }
+
+    .feature-easy__content p {
+        text-align: left;
+        max-width: 46ch
+    }
+}

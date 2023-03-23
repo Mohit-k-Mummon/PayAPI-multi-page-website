@@ -7,6 +7,7 @@ import PartnersSection from '../components/Home/PartnersSection';
 
 // Images
 import BgCircleImg from '../assets/shared/desktop/bg-pattern-circle.svg';
+import FeaturesSection from '../components/Home/FeaturesSection';
 
 const BgCircle = () => {
 	return <img src={BgCircleImg} alt=''></img>;
@@ -18,6 +19,7 @@ const HomePage = () => {
 			{ReactDOM.createPortal(<BgCircle />, document.getElementById('bg-circle-homepage'))}
 			<HeroSection />
 			<PartnersSection />
+			<FeaturesSection />
 		</>
 	);
 };
