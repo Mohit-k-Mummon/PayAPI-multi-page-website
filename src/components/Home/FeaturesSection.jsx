@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as EasyImplementImg } from '../../assets/home/desktop/easy-implement.svg';
+import { ReactComponent as SimpleUIUX } from '../../assets/home/desktop/illustration-simple-ui.svg';
 
 const FeaturesSection = () => {
 	return (
@@ -18,7 +19,18 @@ const FeaturesSection = () => {
 					</p>
 				</div>
 			</div>
-			<div className='feature-simple-ui/ux'></div>
+			<div className='feature-simple-ui'>
+				<div className='feature-simple-ui__img-container'>
+					<SimpleUIUX className='simple-img' />
+				</div>
+				<div className='feature-simple__content'>
+					<h1>Simple UI & UX</h1>
+					<p>
+						Our pre-built form is easy to integrate in your app or website’s checkout
+						flow and designed to optimize conversion.
+					</p>
+				</div>
+			</div>
 		</section>
 	);
 };

@@ -841,7 +841,7 @@ img, picture, video, canvas, svg {
     padding: 2.4rem;
 }
 
-/*Features Container */
+/*Easy Container */
 .feature-easy {
     height: min-content;
     display: flex;
@@ -851,7 +851,7 @@ img, picture, video, canvas, svg {
     margin: 5.8rem auto;
 }
 
-/* features Img */
+/* Easy Img */
 .feature-easy__img-container {
     height: 22.7rem;
     position: relative;
@@ -867,8 +867,9 @@ img, picture, video, canvas, svg {
     z-index: -10;
 }
 
-/* features content */
-.feature-easy__content h1 {
+/* Easy content */
+.feature-easy__content h1,
+.feature-simple__content h1 {
     font-family: var(--Serif-Display);
     font-style: normal;
     font-weight: 400;
@@ -880,7 +881,8 @@ img, picture, video, canvas, svg {
     color: var(--San-Juan-Blue);
 }
 
-.feature-easy__content p {
+.feature-easy__content p,
+.feature-simple__content p {
     font-family: 'Public Sans';
     font-style: normal;
     font-weight: 400;
@@ -891,28 +893,62 @@ img, picture, video, canvas, svg {
     margin-top: 2.4rem;
 }
 
+/* SIMPLE FEATURE */
+.feature-simple-ui {
+    height: min-content;
+    display: flex;
+    gap: 4.8rem;
+    flex-direction: column;
+    max-width: 32.5rem;
+    margin: 8rem auto;
+}
+
+/* Simple Img */
+.feature-simple-ui__img-container {
+    height: 29rem;
+    position: relative;
+}
+
+.simple-img {
+    position: absolute;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    top: 16rem;
+    /* Here we are controlling the size of this svg with max-width */
+    max-width: 42rem;
+    z-index: -10;
+}
+
 @media screen and (min-width: 768px) {
-    /* Features Container */
+    /* Easy Container */
     .feature-easy {
         width: 57.3rem;
         max-width: initial;
         gap: 4.7rem;
         margin: 7.65rem auto;
     }
+
+    /* Simple Container */
+    .feature-simple-ui {
+        width: 57.3rem;
+        max-width: initial;
+        gap: 4.7rem;
+        margin: 10rem auto;
+    }
     
-    /* Features Img */
+    /* Easy Img */
     .feature-easy__img-container {
         height: 25rem;
     }
     
-
     .easy-img {
         max-width: 53.2rem;
         top: 14.7rem;
     }
 
     /* Features Content */
-    .feature-easy__content h1 {
+    .feature-easy__content h1,
+    .feature-simple__content h1 {
         font-size: 4.8rem;
         line-height: 5.6rem;
         letter-spacing: -0.369231px;
@@ -920,7 +956,11 @@ img, picture, video, canvas, svg {
 }
 
 @media screen and (min-width: 1024px) {
-    /* Features Content */
+    .features {
+        box-sizing: content-box;
+    }
+
+    /* Easy Container */
     .feature-easy {
         flex-direction: row;
         justify-content: space-between;
@@ -929,7 +969,16 @@ img, picture, video, canvas, svg {
         margin: 12.5rem auto;
     }
 
-    /* Features Img */
+    /* Simple Container */
+    .feature-simple-ui {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        gap: 12.6rem;
+        margin: 15rem auto;
+    }
+
+    /* Easy Img */
     .feature-easy__img-container {
         width: 44.5rem;
         height: 28.4rem;
@@ -938,6 +987,19 @@ img, picture, video, canvas, svg {
     .easy-img {
         max-width: 62rem;
         top: 16.7rem;
+    }
+    
+
+    /* Simple Img */
+    .feature-simple-ui__img-container {
+        height: 50rem;
+        width: 56.5rem;
+    }
+
+    .simple-img {
+        max-width: 72.5rem;
+        top: 27.5rem;
+        left: 54.5%;
     }
 
     /* Features Content */
@@ -949,9 +1011,20 @@ img, picture, video, canvas, svg {
         text-align: left;
         margin-top: 6rem;
     }
-
+    
     .feature-easy__content p {
         text-align: left;
         max-width: 46ch
+    }
+
+    .feature-simple__content h1 {
+        text-align: left;
+        margin-top: 18.2rem;
+    }
+
+    .feature-simple__content p  {
+        margin-top: 2.2rem;
+        text-align: left;
+        max-width: 50ch;
     }
 }
