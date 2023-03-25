@@ -169,8 +169,10 @@ img, picture, video, canvas, svg {
     padding: 1.55rem 2.455rem;
 }
 
-.button-primary:hover {
-    background-color: var(--Charm-Pink);
+@media (hover: hover) and (pointer: fine) {
+    .button-primary:hover {
+        background-color: var(--Charm-Pink);
+    }
 }
 
 
@@ -197,14 +199,16 @@ img, picture, video, canvas, svg {
     color: var(--Mirage-Blue);
 }
 
-.button-light:hover {
-    background-color: #fff;
-    color: var(--Mirage-Blue);
-}
-
-.button-dark:hover {
-    background-color: var(--Mirage-Blue);
-    color: #fff;
+@media (hover: hover) and (pointer: fine) {
+    .button-light:hover {
+        background-color: #fff;
+        color: var(--Mirage-Blue);
+    }
+    
+    .button-dark:hover {
+        background-color: var(--Mirage-Blue);
+        color: #fff;
+    }
 }
 
 
@@ -1145,6 +1149,7 @@ img, picture, video, canvas, svg {
 .call-to-action {
     padding: 0 2.4rem;
     margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 /* Heading */
@@ -1243,6 +1248,149 @@ img, picture, video, canvas, svg {
 
     /* Form */
     .call-to-action__form {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+/***************************
+    Call To Action Section
+****************************/
+.footer {
+    width: 100%;
+    background-color: var(--Mirage-Blue);
+    height: 35.3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Background Circle */
+.footer__bg-circle-container {
+    width: 78rem;
+    height: 78rem;
+    position: absolute;
+    bottom: -100rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.footer__bg-circle-container img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Logo and Links Container */
+.logo-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+}
+
+/* Logo */
+.footer .logo {
+    margin-top: 4.2rem;
+}
+
+.footer .logo path, .footer .logo g circle {
+    fill: #fff;
+}
+
+/* Links */
+.footer .footer__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer .footer__links li a {
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    color: var(--Link-Water-White);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+
+/* Social Media */
+.social {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 4rem;
+}
+
+.footer svg path {
+    transition: 0.3s;
+}
+
+
+/* Apply hover styles on devices without touch support */
+@media (hover: hover) and (pointer: fine) {
+    /* hover state for socials */
+    .footer .social li a:hover svg path {
+        fill: var(--Charm-Pink);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        height: 10rem;
+        padding: 3.1rem 3.9rem;
+    }
+    
+    /* Background Circle */
+    .footer__bg-circle-container {
+        left: auto;
+        right: -77.5rem;
+        bottom: -93.2rem;
+    }
+    
+    /* Inner Container */
+    .footer .inner-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Logo and Links Container */
+    .logo-links-container {
+        flex-direction: row;
+    }
+
+    /* Logo */
+    .footer .logo {
+        margin-top: 0;
+    }
+
+    /* Links */
+    .footer .footer__links {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    /* Social Media */
+    .social {
         margin: 0;
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MainNavigation from '../components/shared/MainNavigation';
+import Footer from '../components/shared/Footer';
 
 // Router
 import { Outlet } from 'react-router-dom';
@@ -20,6 +21,7 @@ const RootLayout = () => {
 			<main>
 				<Outlet />
 			</main>
+			<Footer />
 		</>
 	);
 };
