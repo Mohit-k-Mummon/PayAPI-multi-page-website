@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 import HeroSection from '../components/Home/HeroSection';
 import PartnersSection from '../components/Home/PartnersSection';
 import AdvantagesSection from '../components/Home/AdvantagesSection';
-import CallToActionSection from '../components/Home/CallToActionSection';
-
+import CallToActionSection from '../components/shared/CallToActionSection';
 // Images
 import BgCircleImg from '../assets/shared/desktop/bg-pattern-circle.svg';
 import FeaturesSection from '../components/Home/FeaturesSection';
