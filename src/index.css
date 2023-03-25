@@ -473,6 +473,7 @@ img, picture, video, canvas, svg {
         text-align: center;
     }
 
+    /* Form */
     .hero__content .hero__content-form {
         align-items: center;
         background-color: var(--Link-Water-White);
@@ -1132,5 +1133,116 @@ img, picture, video, canvas, svg {
 
     .advantage-container img {
         height: 10.6rem;
+    }
+}
+
+
+
+
+/***************************
+    Call To Action Section
+****************************/
+.call-to-action {
+    padding: 0 2.4rem;
+    margin-top: 8rem;
+}
+
+/* Heading */
+.call-to-action h1 {
+    text-align: center;
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    /* identical to box height, or 112% */
+    letter-spacing: -0.246154px;
+    color: var(--San-Juan-Blue);
+}
+
+/* Form */
+.call-to-action__form {
+    margin-top: 3.2rem;
+}
+
+/* Input */
+.call-to-action__form #input-field-cta {
+    background-color: var(--Link-Water-White);
+    border-radius: 2.4rem;
+    border: none;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    color: var(--San-Juan-Blue);
+    font-family: var(--Public-Sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    outline: none;
+    padding: 1.5rem 2.7rem;
+    width: 100%;
+}
+
+/* Inner Button */
+.call-to-action #call-to-action__form-inner-button {
+    display: none;
+}
+
+/* Outer Button */
+.call-to-action #call-to-action__form-outer-button {
+    margin-top: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .call-to-action {
+        margin-top: 10rem;
+    }
+
+    /* Heading */
+    .call-to-action h1 {
+        font-size: 4.8rem;
+    }
+
+    /* Form */
+    .call-to-action__form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--Link-Water-White);
+        border-radius: 2.4rem;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        max-width: 44.5rem;
+        margin: 4rem auto 0;
+    }
+
+    /* Input Field */
+    .call-to-action__form #input-field-cta {
+        width: 100%;
+        box-shadow: none;
+        padding: 1.5rem 2.7rem;
+        width: auto;
+        flex-grow: 1;
+    }
+
+    /* Inner Button */
+    .call-to-action #call-to-action__form-inner-button {
+        display: initial;
+    }
+
+    /* Outer Button */
+    .call-to-action #call-to-action__form-outer-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .call-to-action {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Form */
+    .call-to-action__form {
+        margin: 0;
     }
 }
