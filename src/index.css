@@ -186,12 +186,14 @@ img, picture, video, canvas, svg {
 }
 
 .button-light {
-    outline: 1px solid #fff;
+    /* Here we are using a box shadow as our border as it behaves more consistently across different browsers with anchor tags */
+    box-shadow: 0 0 0 1px #fff;
     color: #FBFCFE;
 }
 
 .button-dark {
-    outline: 1px solid #36536B;
+    /* Here we are using a box shadow as our border as it behaves more consistently across different browsers with anchor tags */
+    box-shadow: 0 0 0 1px var(--San-Juan-Blue);
     color: var(--Mirage-Blue);
 }
 
@@ -839,6 +841,12 @@ img, picture, video, canvas, svg {
 *********************/
 .features {
     padding: 2.4rem;
+    position: relative;
+}
+
+/* Bg Circle */
+.features .bg-circle {
+    display: none;
 }
 
 /*Easy Container */
@@ -900,7 +908,7 @@ img, picture, video, canvas, svg {
     gap: 4.8rem;
     flex-direction: column;
     max-width: 32.5rem;
-    margin: 8rem auto;
+    margin: 8rem auto 0;
 }
 
 /* Simple Img */
@@ -933,7 +941,7 @@ img, picture, video, canvas, svg {
         width: 57.3rem;
         max-width: initial;
         gap: 4.7rem;
-        margin: 10rem auto;
+        margin: 10rem auto 0;
     }
     
     /* Easy Img */
@@ -960,6 +968,16 @@ img, picture, video, canvas, svg {
         box-sizing: content-box;
     }
 
+    /* Bg Circle */
+    .features .bg-circle {
+        display: initial;
+        position: absolute;
+        right: -53.3rem;
+        top: 44.2rem;
+        z-index: -10;
+    }
+
+
     /* Easy Container */
     .feature-easy {
         flex-direction: row;
@@ -975,7 +993,7 @@ img, picture, video, canvas, svg {
         justify-content: space-between;
         width: 100%;
         gap: 12.6rem;
-        margin: 15rem auto;
+        margin: 15rem auto 0;
     }
 
     /* Easy Img */
@@ -1026,5 +1044,93 @@ img, picture, video, canvas, svg {
         margin-top: 2.2rem;
         text-align: left;
         max-width: 50ch;
+    }
+}
+
+
+
+
+/*********************** 
+    Advantages Section
+***********************/
+.advantages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.7rem;
+    padding: 0 2.4rem;
+    margin-top: 5.6rem;
+}
+
+.advantage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 32.8rem;
+    margin: 0 auto;
+}
+
+.advantage-container h1 {
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height, or 139% */
+    letter-spacing: -0.138462px;
+    color: var(--San-Juan-Blue);
+    margin-top: 3.3rem;
+}
+
+.advantage-container p {
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 167% */
+    letter-spacing: -0.115385px;
+    color: var(--Light-San-Juan-Blue);
+    margin-top: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .advantages {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 7.7rem;
+    }
+
+    .advantage-container {
+        justify-content: start;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advantage-container img {
+        height: 8.8rem;
+    }
+
+    .advantage-container h1 {
+        margin-top: 3.1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .advantages {
+        gap: 3rem;
+        box-sizing: content-box;
+        margin-top: 12.1rem;
+    }
+
+    .advantage-container {
+        width: 100%;
+    }
+
+    .advantage-container img {
+        height: 10.6rem;
     }
 }

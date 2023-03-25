@@ -2,10 +2,12 @@ import React from 'react';
 
 import { ReactComponent as EasyImplementImg } from '../../assets/home/desktop/easy-implement.svg';
 import { ReactComponent as SimpleUIUX } from '../../assets/home/desktop/illustration-simple-ui.svg';
+import BgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg';
 
 const FeaturesSection = () => {
 	return (
 		<section className='features container'>
+			<img className='bg-circle' src={BgCircle} alt='' />
 			<div className='feature-easy'>
 				<div className='feature-easy__img-container'>
 					<EasyImplementImg className='easy-img' />
