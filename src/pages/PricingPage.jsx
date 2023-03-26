@@ -22,7 +22,7 @@ const PricingPage = () => {
 				document.getElementById('bg-circle-pricing-contact-about')
 			)}
 			<PricingSection />
-			<CallToActionSection />
+			<CallToActionSection className='pricing-page' />
 		</>
 	);
 };

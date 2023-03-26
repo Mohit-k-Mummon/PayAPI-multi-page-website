@@ -184,19 +184,27 @@
 }
 
 @media screen and (min-width: 1024px) {
-    /* Plans Container */
-    .pricing-plans__container {
-        gap: 3rem;
-    }
-
-    /* Plans */
     .pricing-plans {
         padding: 0 4rem;
         box-sizing: content-box;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
     }
+
+    /* Plans Container */
+    .pricing-plans__container {
+        gap: 3rem;
+        margin-top: 8.6rem;
+    }
+
+    /* Plans */
     .pricing-plans .heading {
         text-align: left;
         font-size: 5.6rem;
+    }
+
+    .plan .plan__header {
+        padding-bottom: 2.4rem;
     }
 
     .plan .plan__header h1 {
@@ -206,10 +214,13 @@
 
     .plan__header p {
         text-align: left;
+        margin-top: 1.9rem;
     }
 
-    .plan__price {
+    .plan__header .plan__price {
         text-align: left;
+        font-size: 5.6rem;
+        margin-top: 0.9rem;
     }
 
     /* Plan Features List */
@@ -223,6 +234,14 @@
     }
 
     .plan .button {
-        margin: 2.4rem 0 0 0;
+        margin: 2.5rem 0 0 0;
     }
+}
+
+
+
+
+/* CTA */
+.pricing-page {
+    margin-bottom: 10.1rem;
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 
-const CallToActionSection = () => {
+const CallToActionSection = props => {
 	return (
-		<section className='call-to-action container'>
+		// Accept props for className that specifies which page this component is on. As is it shared
+		<section className={`call-to-action container ${props.className}`}>
 			<h1>Ready to start?</h1>
 			<form className='call-to-action__form'>
 				<label className='sr-only' htmlFor='input-field'>

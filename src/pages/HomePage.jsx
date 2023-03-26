@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './HomePage.css';
+
 // Components
 import HeroSection from '../components/Home/HeroSection';
 import PartnersSection from '../components/Home/PartnersSection';
