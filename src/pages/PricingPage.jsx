@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 
 import BgCircleImg from '../assets/shared/desktop/bg-pattern-circle.svg';
 
+// Components
+import PricingSection from '../components/Pricing/PricingSection';
+import CallToActionSection from '../components/shared/CallToActionSection';
+
+// CSS
+import './PricingPage.css';
+
 const BgCircle = () => {
 	return <img src={BgCircleImg} alt=''></img>;
 };
@@ -14,7 +21,8 @@ const PricingPage = () => {
 				<BgCircle />,
 				document.getElementById('bg-circle-pricing-contact-about')
 			)}
-			<h1>PricingPage</h1>
+			<PricingSection />
+			<CallToActionSection />
 		</>
 	);
 };

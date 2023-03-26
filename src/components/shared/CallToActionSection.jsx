@@ -3,7 +3,7 @@ import React from 'react';
 const CallToActionSection = () => {
 	return (
 		<section className='call-to-action container'>
-			<h1>Ready to Start?</h1>
+			<h1>Ready to start?</h1>
 			<form className='call-to-action__form'>
 				<label className='sr-only' htmlFor='input-field'>
 					Enter email address

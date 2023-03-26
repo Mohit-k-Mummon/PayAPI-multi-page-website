@@ -181,6 +181,7 @@ img, picture, video, canvas, svg {
 
 /* Secondary button themes */
 .button-secondary {
+    font-family: var(--Public-Sans);
     border-radius: 2.4rem;
     font-size: 1.5rem;
     padding: 1.55rem 3.2rem;
@@ -199,7 +200,17 @@ img, picture, video, canvas, svg {
 .button-dark {
     /* Here we are using a box shadow as our border as it behaves more consistently across different browsers with anchor tags */
     box-shadow: 0 0 0 1px var(--San-Juan-Blue);
-    color: var(--Mirage-Blue);
+    color: var(--San-Juan-Blue);
+}
+
+@media screen and (pointer:fine) {
+    .button-light:hover {
+        color: var(--Mirage-Blue);
+    }
+
+    .button-dark:hover {
+        color: #fff;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1068,6 +1079,7 @@ img, picture, video, canvas, svg {
     gap: 4.7rem;
     padding: 0 2.4rem;
     margin-top: 5.6rem;
+    margin-bottom: 8rem;
 }
 
 .advantage-container {
@@ -1132,6 +1144,7 @@ img, picture, video, canvas, svg {
         gap: 3rem;
         box-sizing: content-box;
         margin-top: 12.1rem;
+        margin-bottom: 10rem;
     }
 
     .advantage-container {
@@ -1151,8 +1164,8 @@ img, picture, video, canvas, svg {
 ****************************/
 .call-to-action {
     padding: 0 2.4rem;
-    margin-top: 8rem;
     margin-bottom: 8rem;
+    max-width: 37.6rem;
 }
 
 /* Heading */
@@ -1201,9 +1214,8 @@ img, picture, video, canvas, svg {
 
 @media screen and (min-width: 768px) {
     .call-to-action {
-        margin-top: 10rem;
+        max-width: 111rem;
     }
-
     /* Heading */
     .call-to-action h1 {
         font-size: 4.8rem;
@@ -1218,7 +1230,7 @@ img, picture, video, canvas, svg {
         border-radius: 2.4rem;
         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
         max-width: 44.5rem;
-        margin: 4rem auto 0;
+        margin: 5rem auto 0;
     }
 
     /* Input Field */
@@ -1247,6 +1259,7 @@ img, picture, video, canvas, svg {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        box-sizing: content-box;
     }
 
     /* Form */
@@ -1254,7 +1267,6 @@ img, picture, video, canvas, svg {
         margin: 0;
     }
 }
-
 
 
 

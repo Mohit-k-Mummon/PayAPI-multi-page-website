@@ -1,0 +1,228 @@
+/****************** 
+    VARIABLES
+******************/
+:root {
+    /* Typography */
+    --Serif-Display: 'DM Serif Display', serif;
+    --Public-Sans: 'Public Sans', sans-serif;
+
+    /* Colors */
+        /* Primary */
+        --Dark-Pink: #ba4270;
+        --Link-Water-White: #fbfcfe;
+
+        /* Secondary */
+        --San-Juan-Blue: #36536b;
+        --Mirage-Blue: #1b262f;
+        --Charm-Pink: #da6d97;
+        --Light-San-Juan-Blue: #6c8294;
+}
+
+/****************** 
+      RESET
+******************/
+.pricing-plans {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 0 2.4rem;
+}
+
+/* Heading */
+.pricing-plans .heading {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    /* identical to box height, or 112% */
+    text-align: center;
+    letter-spacing: -0.246154px;
+    color: var(--San-Juan-Blue);
+}
+
+/* Plans Container */
+.pricing-plans__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.2rem;
+    margin-top: 4.4rem;
+}
+
+/* Plans */
+.pricing-plans__container .plan {
+    max-width: 32.7rem;
+
+}
+
+.pricing-plans .plan__header {
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid  rgba(54, 83, 107, 0.25);
+}
+
+.plan__header h1 {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 133% */
+    text-align: center;
+    letter-spacing: -0.184615px;
+    color: var(--Dark-Pink);
+}
+
+.plan__header p {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    /* or 187% */
+    text-align: center;
+    color: var(--Light-San-Juan-Blue);
+    visibility: hidden;
+}
+
+.plan__price {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.6rem;
+    line-height: 7.2rem;
+    /* identical to box height, or 133% */
+    text-align: center;
+    letter-spacing: -0.184615px;
+    color: var(--San-Juan-Blue);
+    margin-top: 3rem;
+}
+
+/* Plan List */
+.plan__features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 2.4rem 0;
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+}
+
+/* Plan List Item */
+.plan__features li {
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    /* identical to box height, or 175% */
+    color: var(--San-Juan-Blue);
+    width: 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+
+.plan__features li.excluded {
+    color:rgba(54, 83, 107, 0.25)
+}
+
+.plan__features li.excluded > img {
+    visibility: hidden;
+}
+
+/* Button */
+.plan .button-container {
+    display: flex;
+}
+.plan button {
+    margin: 2.4rem auto 0;
+}
+
+@media screen and (min-width: 768px) {
+    .pricing-plans {
+        margin-top: 4.6rem;
+        margin-bottom: 11.5rem;
+    }
+
+    /* Heading */
+    .pricing-plans .heading {
+        font-size: 4.8rem;
+    }
+
+    /* Plans Container */
+    .pricing-plans__container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 8.2rem;
+    }
+
+    /* Plans */
+    .pricing-plans__container .plan {
+        min-width: 22.3rem;
+    }
+
+    .plan .plan__header {
+        padding-bottom: 2rem;
+    }
+
+    .plan__header p {
+        visibility: visible;
+        margin-top: 1.7rem;
+    }
+
+    .plan__header .plan__price {
+        margin-top: 2.1rem;
+        font-size: 4.8rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    /* Plans Container */
+    .pricing-plans__container {
+        gap: 3rem;
+    }
+
+    /* Plans */
+    .pricing-plans {
+        padding: 0 4rem;
+        box-sizing: content-box;
+    }
+    .pricing-plans .heading {
+        text-align: left;
+        font-size: 5.6rem;
+    }
+
+    .plan .plan__header h1 {
+        text-align: left;
+        font-size: 3.2rem;
+    }
+
+    .plan__header p {
+        text-align: left;
+    }
+
+    .plan__price {
+        text-align: left;
+    }
+
+    /* Plan Features List */
+    .plan__features {
+        align-items: start;
+    }
+
+    /* Buttons */
+    .pricing-plans .button-container {
+        justify-content: flex-start;
+    }
+
+    .plan .button {
+        margin: 2.4rem 0 0 0;
+    }
+}
