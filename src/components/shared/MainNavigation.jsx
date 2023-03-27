@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom';
 
 const MainNavigation = props => {
 	return (
-		<header className='header container'>
-			<nav className='main-navigation'>
+		<header className='header'>
+			<nav className='main-navigation container'>
 				<div className='logo-container'>
 					<NavLink to={'/'}>
 						<img className='logo' src={logo} alt='payAPI company logo' />

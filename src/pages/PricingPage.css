@@ -120,7 +120,7 @@
     width: 13rem;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 2.4rem;
 }
@@ -140,6 +140,11 @@
 }
 .plan button {
     margin: 2.4rem auto 0;
+}
+
+/* CTA */
+.pricing-page {
+    margin-bottom: 8rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -180,6 +185,10 @@
         font-size: 4.8rem;
     }
 
+    /* CTA */
+    .pricing-page {
+        margin-bottom: 10rem;
+    }
 
 }
 
@@ -225,7 +234,7 @@
 
     /* Plan Features List */
     .plan__features {
-        align-items: start;
+        align-items: flex-start;
     }
 
     /* Buttons */
@@ -241,7 +250,3 @@
 
 
 
-/* CTA */
-.pricing-page {
-    margin-bottom: 10.1rem;
-}

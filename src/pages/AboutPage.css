@@ -1,0 +1,274 @@
+/****************** 
+    VARIABLES
+******************/
+:root {
+    /* Typography */
+    --Serif-Display: 'DM Serif Display', serif;
+    --Public-Sans: 'Public Sans', sans-serif;
+
+    /* Colors */
+        /* Primary */
+        --Dark-Pink: #ba4270;
+        --Link-Water-White: #fbfcfe;
+
+        /* Secondary */
+        --San-Juan-Blue: #36536b;
+        --Mirage-Blue: #1b262f;
+        --Charm-Pink: #da6d97;
+        --Light-San-Juan-Blue: #6c8294;
+}
+
+
+
+
+/****************** 
+    About Section
+******************/
+.about {
+    margin-top: 1rem;
+}
+
+/* Inner Containers */
+.about__container {
+    text-align: center;
+    padding: 0 4rem;
+}
+
+/* Main Heading */
+.about__container h1 {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    /* or 112% */
+    letter-spacing: -0.246154px;
+    color: var(--San-Juan-Blue);
+    margin-bottom: 4.5rem;
+}
+
+/* Every class that is not the first class */
+.about__container .container__text:not(:first-of-type) {
+    margin-top: 4.8rem;
+}
+
+/* Selecting the last class */
+.about__container .container__text:last-child {
+    margin-bottom: 4.8rem;
+}
+
+/* Content heading */
+.about__container .container__text h2 {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 133% */
+    letter-spacing: -0.184615px;
+    color: var(--San-Juan-Blue);
+}
+
+/* Content text */
+.about__container .container__text p {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    /* or 187% */
+    color: var(--Light-San-Juan-Blue);
+    margin-top: 1.7rem;
+}
+
+/* Banner Img */
+.about .about__banner {
+    margin-top: 7.6rem;
+    margin-bottom: 4.8rem;
+    width: 100%;
+}
+
+/* Company Overview */
+.company-overview {
+    padding: 0 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.company-overview .overview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+    padding: 1.6rem 0;
+    width: 100%;
+}
+
+.company-overview__stat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-overview__stat h3 {
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    /* identical to box height, or 175% */
+    text-align: center;
+    color: var(--San-Juan-Blue);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+}
+
+.company-overview__stat p {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.6rem;
+    line-height: 7.2rem;
+    /* identical to box height, or 129% */
+    text-align: center;
+    letter-spacing: -0.430769px;
+    color: var(--Dark-Pink); 
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        margin-top: 3.35rem;
+    }
+
+    /* Inner Containers */
+    .about__container {
+        text-align: left;
+    }
+
+    /* Main Heading */
+    .about__container h1 {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.369231px;
+        text-align: center;
+        max-width: 22ch;
+        margin: 0 auto 6.4rem;
+    }
+
+    /* Every class that is not the first class */
+    .about__container .container__text:not(:first-of-type) {
+        margin-top: 6.4rem;
+    }
+
+    /* Selecting the last class */
+    .about__container .container__text:last-child {
+        margin-bottom: 8.4rem;
+    }
+    .about__container .container__text {
+        display: flex;
+        gap: 1rem;
+    }
+
+    /* Content Heading */
+    .about__container .container__text h2 {
+        white-space: nowrap;
+        font-family: 'DM Serif Display';
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: -0.246154px;
+        width: 22.3rem;
+    }
+
+    /* Content Text */
+    .about__container .container__text p {
+        margin: 0;
+    }
+
+    /* Banner Img */
+    .about .about__banner {
+        margin-top: 9.2rem;
+        margin-bottom: 4.8rem;
+    }
+
+    /* Company Overview */
+    .company-overview .overview-container {
+        flex-direction: row;
+        border: none;
+        gap: 1rem;
+    }
+
+    .company-overview__stat {
+        border-top: 1px solid rgba(54, 83, 107, 0.25);
+        border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+        align-items: flex-start;
+        padding: 1.6rem 0;
+    }
+
+    /* Call to Action */
+    .about-page {
+        margin-bottom: 10rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about {
+        margin-top: 4.1rem;
+    }
+
+    /* Inner Containers */
+    .about__container {
+        max-width: 92rem;
+        margin: 0 auto;
+        box-sizing: content-box;
+    }
+
+    /* Main Heading */
+    .about__container h1 {
+        text-align: left;
+        margin: 0 0 7.3rem 0;
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.430769px;
+    }
+
+    /* Every class that is not the first class */
+    .about__container .container__text:not(:first-of-type) {
+        margin-top: 5.3rem;
+    }
+
+    /* Selecting the last class */
+    .about__container .container__text:last-child {
+        margin-bottom: 10rem;
+    }
+
+    .about__container .container__text {
+        gap: 3rem;
+    }
+    
+    /* Content Heading */
+    .about__container .container__text h2 {
+        width: 25.5rem;
+    }
+    /* Content Text */
+    .company-overview .overview-container {
+        gap: 3rem;
+    }
+
+    /* Banner Img */
+    .about .about__banner {
+        margin-top: 10.1rem;
+        margin-bottom: 5.6rem;
+    }
+
+    /* Company Overview */
+    .company-overview {
+        margin-bottom: 5.55rem;
+    }
+
+    /* Call To Action */
+    .about-page {
+        margin-bottom: 10rem;
+    }
+}

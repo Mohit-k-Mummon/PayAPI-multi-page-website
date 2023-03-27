@@ -37,6 +37,12 @@ img, picture, video, canvas, svg {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1024px) {
+    .container {
+        box-sizing: content-box;
+    }
+}
+
 /* Class for labels only visible to screen readers */
 .sr-only {
     border: 0 !important;
@@ -302,7 +308,8 @@ img, picture, video, canvas, svg {
 
 @media screen and (min-width: 1024px) {
     .main-navigation {
-        padding: 4rem 0;
+        padding: 4rem 2.4rem;
+        box-sizing: content-box;
     }
 }
 
@@ -455,6 +462,13 @@ img, picture, video, canvas, svg {
     mix-blend-mode: normal;
     opacity: 0.7;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .footer .footer__links li a:hover {
+        opacity: 1;
+    }
 }
 
 
@@ -484,7 +498,7 @@ img, picture, video, canvas, svg {
 @media screen and (min-width: 768px) {
     .footer {
         height: 10rem;
-        padding: 3.1rem 3.9rem;
+        padding: 3.1rem 2.4rem;
     }
     
     /* Background Circle */
