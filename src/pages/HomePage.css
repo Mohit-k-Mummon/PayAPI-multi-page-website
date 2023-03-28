@@ -301,13 +301,21 @@
     width: 11.3rem;
 }
 
-.tesla-logo path,
-.microsoft-logo path,
-.hewlett-logo path,
-.oracle-logo path,
-.google-logo path,
-.nvidia-logo path {
+.tesla-logo.light path,
+.microsoft-logo.light path,
+.hewlett-logo.light path,
+.oracle-logo.light path,
+.google-logo.light path,
+.nvidia-logo.light path {
     fill: #fff;
+}
+.tesla-logo.dark path,
+.microsoft-logo.dark path,
+.hewlett-logo.dark path,
+.oracle-logo.dark path,
+.google-logo.dark path,
+.nvidia-logo.dark path {
+    fill: var(--San-Juan-Blue);
 }
 
 /* Partners Content */

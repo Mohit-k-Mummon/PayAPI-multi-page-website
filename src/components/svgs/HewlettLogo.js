@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactComponent as HewlettLogoSvg } from '../../assets/shared/desktop/hewlett-packard.svg';
 
-const TeslaLogo = () => {
-	return <HewlettLogoSvg className='hewlett-logo' />;
+const HewlettLogo = props => {
+	return <HewlettLogoSvg className={`hewlett-logo ${props.className}`} />;
 };
 
-export default TeslaLogo;
+export default HewlettLogo;

@@ -1,0 +1,262 @@
+/****************** 
+    VARIABLES
+******************/
+:root {
+    /* Typography */
+    --Serif-Display: 'DM Serif Display', serif;
+    --Public-Sans: 'Public Sans', sans-serif;
+
+    /* Colors */
+        /* Primary */
+        --Dark-Pink: #ba4270;
+        --Link-Water-White: #fbfcfe;
+
+        /* Secondary */
+        --San-Juan-Blue: #36536b;
+        --Mirage-Blue: #1b262f;
+        --Charm-Pink: #da6d97;
+        --Light-San-Juan-Blue: #6c8294;
+}
+
+
+
+
+/****************** 
+    Contact
+******************/
+.contact {
+    padding: 0 2.4rem;
+    margin-top: 1rem;
+}
+
+/* Main Heading */
+.contact .contact__main-heading {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    /* or 112% */
+    text-align: center;
+    letter-spacing: -0.246154px;
+    color: var(--San-Juan-Blue);
+    margin-bottom: 4rem;
+    max-width: 20ch;
+    margin: 0 auto;
+}
+
+/* Contact Container */
+.contact__container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTACT FORM */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.4rem;
+    max-width: 44.5rem;
+    margin: 4.8rem auto 8rem;
+}
+
+/* Container for label and inputs */
+.contact__form .input-container {
+    border-bottom: 1px solid rgba(54, 83, 107, 0.50);
+}
+
+.contact__form input,
+.contact__form textarea {
+    padding: 0 2rem 1.6rem 2rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+
+    font-family: var(--Public-Sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    /* identical to box height, or 167% */
+    letter-spacing: -0.115385px;
+    color: var(--San-Juan-Blue);
+}
+
+/* CheckBox Container */
+.checkbox-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+/* Checkbox */
+.contact__form input[type='checkbox']#updates {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    background-color: transparent;
+    /* Add custom styles for the checkbox */
+    background-color: var(--San-Juan-Blue);
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Checkbox Checked */
+.contact__form input[type='checkbox']#updates:checked {
+    background-color: var(--Dark-Pink);
+    opacity: 1;
+}
+
+/* Checkmark svg for checkbox */
+.contact__form svg{
+    height: 1.1rem;
+    width: 1.4rem;
+    position: absolute;
+    top: 1.9rem;
+    left: 0.5rem;
+    pointer-events: none;
+}
+
+.contact__form svg path {
+    stroke: #fff;
+}
+
+.contact__form svg {
+    display: none;
+}
+
+.contact__form svg.checked {
+    display: initial;
+}
+
+/* CheckBox Text */
+.checkbox-container p {
+    font-family: var(--Public-Sans);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    /* or 167% */
+    letter-spacing: -0.115385px;
+    color: var(--San-Juan-Blue);
+}
+
+/* Form Button */
+.contact__form .button {
+    align-self: flex-start;
+    padding: 1.6rem 5.1rem;
+}
+
+/***********************
+    Contact Partners Section
+*************************/
+.contact__partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    margin-bottom: 8rem;
+}
+
+/* Contact Partners Heading */
+.contact__partners .heading {
+    font-family: var(--Serif-Display);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    /* or 133% */
+    text-align: center;
+    letter-spacing: -0.184615px;
+    color: var(--San-Juan-Blue);
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    max-width: 30ch;
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        margin-top: 3.6rem;
+    }
+
+    /* Main Heading */
+    .contact .contact__main-heading {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+    }
+
+    /* CONTACT FORM */
+    .contact__form {
+        margin: 6.4rem auto 6.1rem;
+    }
+
+    /* TextArea */
+    .contact__form textarea {
+        padding: 0 2rem 3.8rem 2rem;
+    }
+
+    /* Contact Partners Section */
+    .contact__partners {
+        gap: 4.2rem;
+        margin-bottom: 10.8rem;
+    }
+
+    /* Call to Action */
+    .call-to-action.contact-page {
+        margin-bottom: 10rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact {
+        margin-top: 4.2rem;
+    }
+    
+    /* Main Heading */
+    .contact .contact__main-heading {
+        margin: 0;
+        max-width: 25ch;
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        letter-spacing: -0.430769px;
+        text-align: left;
+    }
+    
+    /* Contact Container */
+    .contact__container {
+        align-items: center;
+        margin-top: 6.4rem;
+        margin-bottom: 9.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    /* Contact Form */
+    .contact__form {
+        margin: 0;
+    }
+
+    /* Contact Partners Section */
+    .contact__partners {
+        margin: 0;
+        position: relative;
+        bottom: 2.5rem;
+        min-width: 54.1rem;
+    }
+}

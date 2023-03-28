@@ -36,7 +36,7 @@ const AboutSection = () => {
 			</div>
 			<picture className='banner-container'>
 				<source srcSet={mobileBanner} media='(max-width: 420px)'></source>
-				<source srcSet={TabletBanner} media='(min-width: 421px)'></source>
+				<source srcSet={TabletBanner} media='(max-width: 768px)'></source>
 				<source srcSet={DesktopBanner} media='(min-width: 769px)'></source>
 				<img className='about__banner' src={mobileBanner} alt='Default' />
 			</picture>

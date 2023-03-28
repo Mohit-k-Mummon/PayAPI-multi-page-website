@@ -1,8 +1,8 @@
 import React from 'react';
 import { ReactComponent as OracleLogoSvg } from '../../assets/shared/desktop/oracle.svg';
 
-const TeslaLogo = () => {
-	return <OracleLogoSvg className='oracle-logo' />;
+const OracleLogo = props => {
+	return <OracleLogoSvg className={`oracle-logo ${props.className}`} />;
 };
 
-export default TeslaLogo;
+export default OracleLogo;
