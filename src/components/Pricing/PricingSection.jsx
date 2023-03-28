@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Images
 import checkmarkIcon from '../../assets/shared/desktop/icon-check.svg';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const PricingSection = () => {
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+		});
+	}, []);
 	return (
 		<section className='pricing-plans container'>
 			<h1 className='heading'>Pricing</h1>
 			<div className='pricing-plans__container'>
-				<div className='plan'>
+				<div data-aos='fade-down' className='plan'>
 					<header className='plan__header'>
 						<h1>Free Plan</h1>
 						<p>
@@ -53,7 +61,7 @@ const PricingSection = () => {
 						</button>
 					</div>
 				</div>
-				<div className='plan'>
+				<div data-aos='fade-down' data-aos-delay='50' className='plan'>
 					<header className='plan__header'>
 						<h1>Basic Plan</h1>
 						<p>
@@ -97,7 +105,7 @@ const PricingSection = () => {
 						</button>
 					</div>
 				</div>
-				<div className='plan'>
+				<div data-aos='fade-down' className='plan'>
 					<header className='plan__header'>
 						<h1>Premium Plan</h1>
 						<p>

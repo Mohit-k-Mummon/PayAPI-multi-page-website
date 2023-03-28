@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { ReactComponent as EasyImplementImg } from '../../assets/home/desktop/easy-implement.svg';
 import { ReactComponent as SimpleUIUX } from '../../assets/home/desktop/illustration-simple-ui.svg';
 import BgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg';
 
 const FeaturesSection = () => {
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+		});
+	}, []);
 	return (
 		<section className='features container'>
 			<img className='bg-circle' src={BgCircle} alt='' />
 			<div className='feature-easy'>
-				<div className='feature-easy__img-container'>
+				<div data-aos='fade-right' className='feature-easy__img-container'>
 					<EasyImplementImg className='easy-img' />
 				</div>
-				<div className='feature-easy__content'>
+				<div data-aos='fade-left' className='feature-easy__content'>
 					<h1>Easy to implement</h1>
 					<p>
 						Our API comes with just a few lines of code. You’ll be up and running in no
@@ -22,10 +31,10 @@ const FeaturesSection = () => {
 				</div>
 			</div>
 			<div className='feature-simple-ui'>
-				<div className='feature-simple-ui__img-container'>
+				<div data-aos='fade-left' className='feature-simple-ui__img-container'>
 					<SimpleUIUX className='simple-img' />
 				</div>
-				<div className='feature-simple__content'>
+				<div data-aos='fade-right' className='feature-simple__content'>
 					<h1>Simple UI & UX</h1>
 					<p>
 						Our pre-built form is easy to integrate in your app or website’s checkout

@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import './HomePage.css';
 
@@ -13,10 +16,14 @@ import BgCircleImg from '../assets/shared/desktop/bg-pattern-circle.svg';
 import FeaturesSection from '../components/Home/FeaturesSection';
 
 const BgCircle = () => {
-	return <img src={BgCircleImg} alt=''></img>;
+	return <img data-aos='fade-down' data-aos-duration='800' src={BgCircleImg} alt=''></img>;
 };
 
 const HomePage = () => {
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
 		<>
 			{ReactDOM.createPortal(<BgCircle />, document.getElementById('bg-circle-homepage'))}

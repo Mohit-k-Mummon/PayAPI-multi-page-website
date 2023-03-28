@@ -24,7 +24,7 @@ const ContactForm = () => {
 	// Email
 	const [enteredEmail, setEnteredEmail] = useState('');
 	const [emailInputWasTouched, setEmailInputWasTouched] = useState(false);
-	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/i;
+	const emailRegex = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,}$/i;
 	const enteredEmailIsValid = emailRegex.test(enteredEmail);
 	const emailInputIsInvalid =
 		(enteredEmail === '' || !emailRegex.test(enteredEmail)) && emailInputWasTouched;

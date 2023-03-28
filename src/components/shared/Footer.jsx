@@ -11,6 +11,10 @@ import { ReactComponent as LinkedInIcon } from '../../assets/shared/desktop/link
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
+	// When click on link it goes to the top of the navigated page
+	const linkClickHandler = () => {
+		window.scrollTo(0, 0);
+	};
 	return (
 		<footer className='footer'>
 			<div className='footer__bg-circle-container'>
@@ -18,18 +22,24 @@ const Footer = () => {
 			</div>
 			<div className='inner-container container'>
 				<div className='logo-links-container '>
-					<NavLink to={'/'}>
+					<NavLink to={'/'} onClick={linkClickHandler}>
 						<Logo className='logo' />
 					</NavLink>
 					<ul className='footer__links'>
 						<li>
-							<NavLink to={'/pricing'}>Pricing</NavLink>
+							<NavLink to={'/pricing'} onClick={linkClickHandler}>
+								Pricing
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to={'/about'}>About</NavLink>
+							<NavLink to={'/about'} onClick={linkClickHandler}>
+								About
+							</NavLink>
 						</li>
 						<li>
-							<NavLink to={'/contact'}>Contact</NavLink>
+							<NavLink to={'/contact'} onClick={linkClickHandler}>
+								Contact
+							</NavLink>
 						</li>
 					</ul>
 				</div>
